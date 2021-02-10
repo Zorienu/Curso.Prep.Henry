@@ -57,7 +57,7 @@ function arrayContiene(array, elemento) {
   // Devuelve "true" si está, o "false" si no está
   // Tu código:
   //return array.indexOf(elemento) !== -1;
-  for (var i = 0; i < array.length; i++) {
+  for (let i = 0; i < array.length; i++) {
     if (array[i] === elemento) {
       return true;
     }
@@ -125,13 +125,11 @@ function todosIguales(arreglo) {
   //Escriba la función todosIguales, que indique si todos los elementos de un arreglo son iguales:
   //retornar true, caso contrario retornar false.
   //Escribe tu código aquí
-  let same = true;
-
   arreglo.forEach((e) => {
-    if (arreglo[0] !== e) same = false;
+    if (arreglo[0] !== e) return false;
   });
 
-  return same;
+  return true;
 }
 
 function mesesDelAño(array) {
